@@ -1,0 +1,41 @@
+
+// VARIAVEL "$"
+$cor-principal : blue;
+$cor-secundaria : red;
+$cor-letra: white;
+
+//CRIAR FUNÇAO " @MIXIN"
+//CHAMAR FUNÇAO "@INCLUDE"
+@mixin resetposiçao {
+    margin: 0;
+    padding: 0; 
+}
+
+@mixin COR-TRAÇO ($cor-fundo, $cor-letras) {
+    width: 50%;
+    background-color: $cor-fundo;
+
+    .texto{
+        text-align: center;
+        margin-top: 50px;
+        font-size: 50px;
+        color: $cor-letra;
+    }
+}
+
+body{
+    @include resetposiçao;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+
+    .esquerdo{
+        @include COR-TRAÇO($cor-principal, $cor-secundaria);
+    }
+
+    .meio{
+        @include COR-TRAÇO($cor-secundaria, $cor-principal);
+    }
+}

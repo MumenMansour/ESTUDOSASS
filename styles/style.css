@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+}
+.container .esquerdo {
+  width: 50%;
+  background-color: blue;
+}
+.container .esquerdo .texto {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 50px;
+  color: white;
+}
+.container .meio {
+  width: 50%;
+  background-color: red;
+}
+.container .meio .texto {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 50px;
+  color: white;
+}/*# sourceMappingURL=style.css.map */
